@@ -1,0 +1,87 @@
+{
+  "basics": {
+    "name": "Rahul Patil",
+    "label": "Software Developer | Morgan Stanley | Applied CS",
+    "email": "rahulpatil.m30@gmail.com",
+    "phone": "3439886159",
+    "url": "https://github.com/iRahulP/",
+    "summary": "I’m a Full Stack Developer with strong experience building scalable, production-grade applications using React, Python, Java, FastAPI, Docker, and AWS. My work spans frontend engineering, backend APIs, cloud deployments, and Generative AI integrations. I’ve delivered projects that solve real problems—from AI-powered search platforms to multi-step React apps, automation tools, and developer-focused AI assistants. I enjoy taking ownership, debugging deep issues, improving system design, and building clean, maintainable software.",
+    "location": {
+      "city": "Ottawa",
+      "region": "Ontario",
+      "country": "Canada"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/rahul-s-patil"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/iRahulP/"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "company": "Morgan Stanley",
+      "role": "Technology Associate",
+      "dates": "February 2023 - Present",
+      "duration": "3 years 2 months",
+      "location": "Montreal, Quebec, Canada",
+      "bullets": ["Technology Associate role at Morgan Stanley", "Applied CS focus"]
+    },
+    {
+      "company": "Morgan Stanley",
+      "role": "Technology Summer Analyst",
+      "dates": "May 2022 - September 2022",
+      "duration": "5 months",
+      "location": "Montreal, Quebec, Canada",
+      "bullets": ["Summer Analyst internship"]
+    },
+    {
+      "company": "Tata Consultancy Services",
+      "role": "Assistant System Engineer",
+      "dates": "June 2019 - October 2020",
+      "duration": "1 year 5 months",
+      "location": "Mumbai, Maharashtra, India",
+      "bullets": ["Assistant System Engineer role"]
+    }
+  ],
+  "skills": {
+    "top": ["Generative AI", "Docker", "Python (Programming Language)"],
+    "core": ["React", "TypeScript", "Python", "Java", "FastAPI", "Docker", "AWS", "Linux", "AEM", "Jenkins CI/CD", "GenAI"],
+    "languages": ["Marathi (Native or Bilingual)", "English (Professional Working)", "Hindi (Native or Bilingual)", "Gujarati (Native or Bilingual)"]
+  },
+  "certifications": [
+    "Web Scraping and API Fundamentals in Python",
+    "Master SQL for Data Science",
+    "Bash Scripting and Shell Programming (Linux Command Line)",
+    "Mastering SQL Server Reporting Services (SSRS)",
+    "Python for Data Science and Machine Learning"
+  ],
+  "education": [
+    {
+      "institution": "Concordia University",
+      "degree": "Master of Applied Computer Science",
+      "field": "Computer Science",
+      "dates": "January 2021 - January 2023"
+    },
+    {
+      "institution": "Shri Guru Gobind Singhji Institute of Engineering and Technology",
+      "degree": "Bachelor of Technology - B.Tech.",
+      "field": "Computer Science",
+      "dates": "2015 - 2019",
+      "location": "Vishnupuri, Nanded"
+    }
+  ],
+  "projects": [
+    { "title": "AI-powered search platforms", "description": "Solving real problems with AI-driven search." },
+    { "title": "Multi-step React apps", "description": "Building scalable, production-grade frontend applications." },
+    { "title": "Automation tools", "description": "Streamlining workflows and improving system design." },
+    { "title": "Developer-focused AI assistants", "description": "Integrating Generative AI for developer productivity." }
+  ],
+  "extra": [
+    "If you're looking for someone who learns fast, executes reliably, and builds with intent, let's connect."
+  ]
+}
