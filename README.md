@@ -41,15 +41,20 @@ Visit my portfolio at: **[iRahulP.github.io](https://irahulp.github.io)**
 
 ## 📦 Deploy to GitHub Pages
 
-This repo is set up to build the Vite app and deploy the generated `dist` output to GitHub Pages using GitHub Actions.
+This repo is set up to build the Vite app and publish the generated output into the `docs/` folder.
 
 - For a **profile site**, name the repository `username.github.io`. The site will be available at `https://username.github.io/`.
 - For a **project site**, any repository name works and the site will be available at `https://username.github.io/repo/`.
 
+GitHub Pages should be configured to deploy from:
+
+- **Branch:** `main`
+- **Folder:** `docs`
+
 Deployment workflow:
 
-- There's a workflow at `/.github/workflows/deploy.yml` that runs on `push` to the `main` branch. It installs dependencies, runs `npm run build`, and deploys the built artifact using the Pages actions.
-- A small workaround retries installation if `npm ci` fails due to optional native bindings (common with some native optional deps).
+- There's a workflow at `/.github/workflows/deploy.yml` that runs on `push` to the `main` branch. It installs dependencies, runs `npm run build`, and copies the generated output into `docs/`.
+- A small workaround retries installation if `npm ci` fails due to optional native bindings (common with some optional dependencies).
 
 Local test & build commands:
 
