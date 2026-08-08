@@ -38,3 +38,33 @@ Visit my portfolio at: **[iRahulP.github.io](https://irahulp.github.io)**
 - **Animations:** Motion (Framer Motion)
 - **Build Tool:** Vite
 - **Icons:** Lucide React
+
+## 📦 Deploy to GitHub Pages
+
+This repo is set up to build the Vite app and deploy the generated `dist` output to GitHub Pages using GitHub Actions.
+
+- For a **profile site**, name the repository `username.github.io`. The site will be available at `https://username.github.io/`.
+- For a **project site**, any repository name works and the site will be available at `https://username.github.io/repo/`.
+
+Deployment workflow:
+
+- There's a workflow at `/.github/workflows/deploy.yml` that runs on `push` to the `main` branch. It installs dependencies, runs `npm run build`, and deploys the built artifact using the Pages actions.
+- A small workaround retries installation if `npm ci` fails due to optional native bindings (common with some native optional deps).
+
+Local test & build commands:
+
+```bash
+npm ci
+npm run build
+npm run preview
+# or serve the dist folder
+npm install -g serve
+serve -s dist
+```
+
+Notes:
+
+- I added a `.nojekyll` file to the repo root so GitHub Pages will not process the site with Jekyll and will serve all files directly.
+- After pushing to `main`, check the Actions run in the repository's Actions tab, then confirm the site at Settings → Pages if needed. The Pages action usually publishes automatically.
+
+If you'd like, I can push the workflow and these changes to the remote for you.

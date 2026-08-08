@@ -13,10 +13,13 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'deploy:')"
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -31,12 +34,22 @@ jobs:
 
       - name: Build
         run: npm run build
+      - name: Copy `dist` to repo root
+        run: |
+          ls -la dist || (echo "dist not found" && exit 1)
+          # Copy built files into repository root (overwrite existing files)
+          cp -a dist/. .
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      - name: Commit and push build to `main` root
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "deploy: update site [skip ci]"
+            git push origin HEAD:main
+          fi
